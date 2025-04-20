@@ -1,54 +1,94 @@
-# React + TypeScript + Vite
+# MITPA User Verification Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the official frontend for MITPA’s user verification system. It allows users to verify their identity using a unique ID and optional email, protected by reCAPTCHA and enhanced with toast notifications for user feedback.
 
-Currently, two official plugins are available:
+> 🧠 Used during onboarding and validation of new users on the MITPA platform.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌐 Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This component is typically embedded or opened via a verification link like:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+https://verify.mitpa.tech/?id=USER_ID
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Features
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- ✅ Secure email input with sanitization and validation
+- 🧪 reCAPTCHA integration to block bots
+- ✉️ Sends email verification code via API
+- 🔐 Final user verification with code
+- 🔄 Auto closes window after success
+- 📱 Fully responsive design
+- 🎨 Clean UX with toast feedback
+
+---
+
+## 🚀 Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/MITPAcademy/verify.mitpa.tech.git
+cd verify.mitpa.tech
 ```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Create `.env` file
+
+```env
+REACT_APP_API_GENERATE_CODE_URL=https://api.mitpa.tech/generate-code
+REACT_APP_API_VERIFY_CODE_URL=https://api.mitpa.tech/verify-code
+REACT_APP_API_VERIFY_USER_URL=https://api.mitpa.tech/verify-user
+REACT_APP_RECAPTCHA_SITE_KEY=YOUR_RECAPTCHA_SITE_KEY
+```
+
+> 🔐 Never commit your `.env` file to version control.
+
+### 4. Run locally
+
+```bash
+npm start
+```
+
+The app will be available at [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🧩 Tech Stack
+
+- **React**
+- **TypeScript**
+- **reCAPTCHA v2**
+- **React Toastify**
+- **Custom API Integration**
+- **CSS Modules**
+
+---
+
+## 🛠️ Contributing
+
+We welcome contributions to improve user experience, accessibility, and performance.
+
+1. Fork the repository
+2. Create a new branch: `feature/my-feature`
+3. Commit your changes
+4. Open a pull request with a clear description
+
+---
+
+## 📫 Contact
+
+If you have any suggestions, issues, or ideas:
+
+- Join us at [mitpa.tech/discord](https://mitpa.tech/discord)
+- Or email us: support@mitpa.tech
