@@ -46,10 +46,10 @@ npm install
 ### 3. Create `.env` file
 
 ```env
-REACT_APP_API_GENERATE_CODE_URL=https://api.mitpa.tech/generate-code
-REACT_APP_API_VERIFY_CODE_URL=https://api.mitpa.tech/verify-code
-REACT_APP_API_VERIFY_USER_URL=https://api.mitpa.tech/verify-user
-REACT_APP_RECAPTCHA_SITE_KEY=YOUR_RECAPTCHA_SITE_KEY
+VITE_API_GENERATE_CODE_URL=https://api.mitpa.tech/generate-code
+VITE_API_VERIFY_CODE_URL=https://api.mitpa.tech/verify-code
+VITE_API_VERIFY_USER_URL=https://api.mitpa.tech/verify-user
+VITE_RECAPTCHA_SITE_KEY=YOUR_RECAPTCHA_SITE_KEY
 ```
 
 > 🔐 Never commit your `.env` file to version control.
