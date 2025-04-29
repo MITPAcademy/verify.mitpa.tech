@@ -50,7 +50,7 @@ const App: React.FC = () => {
 
         if (cleanEmail === "") {
             try {
-                const response = await fetch(process.env.REACT_APP_API_VERIFY_USER_URL!, {
+                const response = await fetch(import.meta.env.VITE_API_VERIFY_USER_URL!, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ user_id: id })
@@ -69,7 +69,7 @@ const App: React.FC = () => {
         }
 
         try {
-            const response = await fetch(process.env.REACT_APP_API_GENERATE_CODE_URL!, {
+            const response = await fetch(import.meta.env.VITE_API_GENERATE_CODE_URL!, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ to: cleanEmail, user_id: id })
@@ -93,14 +93,14 @@ const App: React.FC = () => {
         const cleanCode = sanitize(verificationCode);
 
         try {
-            const codeCheckResponse = await fetch(process.env.REACT_APP_API_VERIFY_CODE_URL!, {
+            const codeCheckResponse = await fetch(import.meta.env.VITE_API_VERIFY_CODE_URL!, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ user_id: id, code: cleanCode })
             });
 
             if (codeCheckResponse.ok) {
-                const userVerificationResponse = await fetch(process.env.REACT_APP_API_VERIFY_USER_URL!, {
+                const userVerificationResponse = await fetch(import.meta.env.VITE_API_VERIFY_USER_URL!, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ user_id: id, email: sanitize(email) })
@@ -144,7 +144,7 @@ const App: React.FC = () => {
                             className="input"
                         />
                         <ReCAPTCHA
-                            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY!}
+                            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY!}
                             onChange={setCaptchaValue}
                         />
                         <button className="button">{buttonText}</button>
