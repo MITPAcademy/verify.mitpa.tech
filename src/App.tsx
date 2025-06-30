@@ -124,8 +124,8 @@ const App: React.FC = () => {
         <div className="app-container">
             <ToastContainer />
             <img
-                src="https://raw.githubusercontent.com/TheusHen/TheusHen/refs/heads/main/src/assets/mitpa.png"
-                alt="MITPA Logo"
+                src="https://practa.tech/Logo.png"
+                alt="PRACTA Logo"
                 className="logo"
             />
 

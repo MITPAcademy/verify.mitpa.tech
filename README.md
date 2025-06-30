@@ -1,8 +1,8 @@
-# MITPA User Verification Frontend
+# PRACTA User Verification Frontend
 
-This is the official frontend for MITPA’s user verification system. It allows users to verify their identity using a unique ID and optional email, protected by reCAPTCHA and enhanced with toast notifications for user feedback.
+This is the official frontend for PRACTA’s user verification system. It allows users to verify their identity using a unique ID and optional email, protected by reCAPTCHA and enhanced with toast notifications for user feedback.
 
-> 🧠 Used during onboarding and validation of new users on the MITPA platform.
+> 🧠 Used during onboarding and validation of new users on the PRACTA platform.
 
 ---
 
@@ -11,7 +11,7 @@ This is the official frontend for MITPA’s user verification system. It allows 
 This component is typically embedded or opened via a verification link like:
 
 ```
-https://verify.mitpa.tech/?id=USER_ID
+https://verify.practa.tech/?id=USER_ID
 ```
 
 ---
@@ -33,8 +33,8 @@ https://verify.mitpa.tech/?id=USER_ID
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/MITPAcademy/verify.mitpa.tech.git
-cd verify.mitpa.tech
+git clone https://github.com/practacademy/verify.practa.tech.git
+cd verify.practa.tech
 ```
 
 ### 2. Install dependencies
@@ -46,9 +46,9 @@ npm install
 ### 3. Create `.env` file
 
 ```env
-VITE_API_GENERATE_CODE_URL=https://api.mitpa.tech/generate-code
-VITE_API_VERIFY_CODE_URL=https://api.mitpa.tech/verify-code
-VITE_API_VERIFY_USER_URL=https://api.mitpa.tech/verify-user
+VITE_API_GENERATE_CODE_URL=https://api.practa.tech/generate-code
+VITE_API_VERIFY_CODE_URL=https://api.practa.tech/verify-code
+VITE_API_VERIFY_USER_URL=https://api.practa.tech/verify-user
 VITE_RECAPTCHA_SITE_KEY=YOUR_RECAPTCHA_SITE_KEY
 ```
 
@@ -90,5 +90,5 @@ We welcome contributions to improve user experience, accessibility, and performa
 
 If you have any suggestions, issues, or ideas:
 
-- Join us at [mitpa.tech/discord](https://mitpa.tech/discord)
-- Or email us: support@mitpa.tech
+- Join us at [practa.tech/discord](https://practa.tech/discord)
+- Or email us: support@practa.tech
